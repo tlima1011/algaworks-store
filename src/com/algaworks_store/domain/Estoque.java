@@ -42,20 +42,23 @@ public class Estoque {
 	
 	public void qtdeTotal(Estoque [] estoque){
 		System.out.printf("Quantidade produtos: %d\n", estoque.length);
+		double sum = 0.0; 
+		double precoTotal = 0.0; 
 		for(int i = 0; i < estoque.length;i++) {
-			System.out.println("=====================");
-			System.out.printf(" Produto %d\n",i);
-			System.out.println("=====================");
-			System.out.println("Nome: " +getProduto());
-			System.out.println("Quantidade: " +getQuantidade());
-			System.out.println("Preco " +getProduto());
-			System.out.println("=====================");
+			System.out.println("================================");
+			System.out.printf(" Produto %d\n", i + 1);
+			System.out.println("================================");
+			System.out.println("Nome: " +estoque[i].getProduto());
+			System.out.println("Quantidade: " +estoque[i].getQuantidade());
+			System.out.println("Preco R$" +String.format("%.2f", estoque[i].getPreco()));
+			sum = estoque[i].getPreco() * estoque[i].getQuantidade();
+			precoTotal += sum; 
+			System.out.println("Sub Total R$" +String.format("%.2f", sum));			
 		}
-		
+		System.out.println("================================");
+		System.out.println("Preco Total R$" +String.format("%.2f", precoTotal));
+		System.out.println("================================");
 	}
-	
-	
-	
 	
 
 }

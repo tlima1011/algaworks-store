@@ -12,7 +12,7 @@ public class Main {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in); 
 		
-		System.out.print("Quantos Produtos você quer cadastrar?");
+		System.out.print("Quantos Produtos você quer cadastrar?: ");
 		int qtde = sc.nextInt();
 		
 		Estoque [] produtos = new Estoque[qtde]; 
@@ -21,7 +21,7 @@ public class Main {
 		for(int i = 0; i < produtos.length;i++) {
 			produtos[i] = new Estoque();
 			sc.nextLine();
-			System.out.printf("Informe dados do %dº produto\n", i);
+			System.out.printf("Informe dados do %dº produto\n", i + 1);
 			System.out.print("Nome: ");
 			String nome = sc.nextLine(); 
 			System.out.print("Valor do Produto R$");
@@ -32,9 +32,8 @@ public class Main {
 			produtos[i].setPreco(preco);
 			produtos[i].setQuantidade(quantidade);
 		}
+		e.qtdeTotal(produtos);			
 		
-		
-			
 		
 		sc.close();
 	}

@@ -40,6 +40,19 @@ public class Estoque {
 		this.quantidade = quantidade;
 	}
 	
+	public void qtdeTotal(Estoque [] estoque){
+		System.out.printf("Quantidade produtos: %d\n", estoque.length);
+		for(int i = 0; i < estoque.length;i++) {
+			System.out.println("=====================");
+			System.out.printf(" Produto %d\n",i);
+			System.out.println("=====================");
+			System.out.println("Nome: " +getProduto());
+			System.out.println("Quantidade: " +getQuantidade());
+			System.out.println("Preco " +getProduto());
+			System.out.println("=====================");
+		}
+		
+	}
 	
 	
 	

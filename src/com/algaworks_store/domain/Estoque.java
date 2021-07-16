@@ -46,7 +46,7 @@ public class Estoque {
 		double precoTotal = 0.0; 
 		for(int i = 0; i < estoque.length;i++) {
 			System.out.println("================================");
-			System.out.printf(" Produto %d\n", i + 1);
+			System.out.printf(" Produto #%d\n", i + 1);
 			System.out.println("================================");
 			System.out.println("Nome: " +estoque[i].getProduto());
 			System.out.println("Quantidade: " +estoque[i].getQuantidade());

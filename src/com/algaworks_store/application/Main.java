@@ -33,8 +33,7 @@ public class Main {
 			produtos[i].setQuantidade(quantidade);
 		}
 		e.qtdeTotal(produtos);			
-		
-		
+				
 		sc.close();
 	}
 
